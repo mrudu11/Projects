@@ -1,0 +1,280 @@
+
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+    text-align: center;
+    margin: 0 0 35px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 18px;
+    font-size: 23px;
+    color: #334155;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
+
+
+/* =========================
+   Student Form
+========================= */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+
+/* =========================
+   Input Fields
+========================= */
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 15px;
+
+    color: #1e293b;
+    background-color: #ffffff;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+input:focus {
+    color: #111827;
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+
+/* Add / Update Button */
+
+form button[type="submit"] {
+    background: #2563eb;
+    color: white;
+}
+
+form button[type="submit"]:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+
+/* Cancel Button */
+
+form button[type="button"] {
+    background: #64748b;
+    color: white;
+}
+
+form button[type="button"]:hover {
+    background: #475569;
+}
+
+
+/* =========================
+   Table
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Table Header */
+
+thead {
+    background: #1e3a8a;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+
+/* Table Body */
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 15px;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #f1f5ff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================
+   Edit Button
+========================= */
+
+td button:first-child {
+    background: #f59e0b;
+    color: white;
+}
+
+td button:first-child:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Delete Button
+========================= */
+
+td button:last-child {
+    background: #ef4444;
+    color: white;
+}
+
+td button:last-child:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    input {
+        padding: 11px;
+    }
+
+    button {
+        padding: 10px 14px;
+    }
+}
